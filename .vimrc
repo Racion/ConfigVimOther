@@ -11,11 +11,12 @@ Plug 'preservim/nerdcommenter'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'powerline/powerline'
+Plug 'jiangmiao/auto-pairs'
 
 call plug#end()
 "My ConFigs
 set nocompatible
-set relativenumber
+"set relativenumber
 set nu
 set tabstop=4 softtabstop=4
 set expandtab
@@ -37,7 +38,7 @@ set path+=**
 "Themes and Others
 colorscheme gruvbox
 set bg=dark
-let g:airline_theme='deus'
+let g:airline_theme='powerlineish'
 "Vim navigation 
 let mapleader=" "
 nnoremap <leader>h :wincmd h<CR>
@@ -80,3 +81,11 @@ if exists('*complete_info')
 else
   inoremap <expr> <cr> pumvisible() ? "\<C-y>" : "\<C-g>u\<CR>"
 endif
+"Emmet lenguages
+let g:user_emmet_settings={
+                        \'javascript':{
+                        \'extends':'html',
+                        \'filters':'c'
+                        \}
+ \}
+
