@@ -12,11 +12,13 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'powerline/powerline'
 Plug 'jiangmiao/auto-pairs'
+Plug 'junegunn/rainbow_parentheses.vim'
 
 call plug#end()
 "My ConFigs
 set nocompatible
 "set relativenumber
+set belloff=all
 set nu
 set tabstop=4 softtabstop=4
 set expandtab
@@ -88,4 +90,10 @@ let g:user_emmet_settings={
                         \'filters':'c'
                         \}
  \}
-
+"NerdCommenter config
+let g:NERDSpaceDelims = 1
+let g:NERDCompactSexyComs = 1
+let g:NERDDefaultAlign = 'left'
+let g:NERDToggleCheckAllLines = 1
+"Abrir en chrome 
+nmap <silent> <leader>w :exec 'silent !vivaldi % '<CR>
